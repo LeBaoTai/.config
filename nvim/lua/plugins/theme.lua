@@ -1,8 +1,12 @@
 return {
-    "olimorris/onedarkpro.nvim",
-    priority = 1000, -- Ensure it loads first
-
+    'sainnhe/everforest',
+    lazy = false,
+    priority = 1000,
     config = function()
-        vim.cmd("colorscheme vaporwave")
+        vim.g.everforest_enable_italic = true
+        vim.g.everforest_cursor = 'purple'
+        vim.g.everforest_background = 'hard'
+        vim.g.everforest_current_word = 'bold'
+        vim.cmd.colorscheme('everforest')
     end
 }
