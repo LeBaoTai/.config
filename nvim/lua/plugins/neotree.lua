@@ -10,9 +10,14 @@ return {
 
     config = function()
         require('neo-tree').setup({
+            vim.keymap.set("n", "<leader>nt", "<Cmd>Neotree<CR>"),
             popup_border_style = "rounded",
             window = {
-                position = "float"
+                position = "float",
+                mappings = {
+                    ["z"] = "close_all_nodes",
+                    ["Z"] = "expand_all_nodes",
+                }
             }
         })
     end
